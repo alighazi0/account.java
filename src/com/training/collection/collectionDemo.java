@@ -1,9 +1,12 @@
 package com.training.collection;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -39,37 +42,49 @@ public class collectionDemo {
 //			
 		
 		
-		 Scanner scanner = Customer.getScanner(); 
+//		 Scanner scanner = Customer.getScanner(); 
+//
+//	        List<Runnable> menuActions = new ArrayList<>();
+//	        menuActions.add(Customer::addCustomer);   
+//	        menuActions.add(Customer::updateCustomer); 
+//	        menuActions.add(Customer::deleteCustomer); 
+//	        menuActions.add(Customer::showCustomers); 
+//	        menuActions.add(() -> { 
+//	            System.out.println("Exiting program...");
+//	            scanner.close();
+//	            System.exit(0);
+//	        });
+//
+//	        while (true) {
+//	            System.out.println("\n Customer Management System");
+//	            System.out.println("1️:Add Customer");
+//	            System.out.println("2️: Update Customer");
+//	            System.out.println("3️: Delete Customer");
+//	            System.out.println("4️: Show All Customers");
+//	            System.out.println("5️: Exit");
+//	            System.out.print("Enter your choice: ");
+//
+//	            int choice = scanner.nextInt();
+//
+//	            if (choice >= 1 && choice <= menuActions.size()) {
+//	                menuActions.get(choice - 1).run();
+//	            } else {
+//	                System.out.println("Invalid choice! Please try again.");
+//	            }
+//	        }
+//		
+	        
+	        
+	        Map<Integer, String> empMap = new HashMap <>();
+	        		empMap.put(101, "gh");
+	    	        		empMap.put(102, "gh");
+	    	    	        		empMap.put(103, "gh");
+	    	    	        				
+	    	    	        				for(Entry<Integer,String> empEntry : empMap.entrySet()) {
+	    	    	        					System.out.println(empEntry.getKey()+":"+ empEntry.getValue());
+	    	    	        				}
 
-	        List<Runnable> menuActions = new ArrayList<>();
-	        menuActions.add(Customer::addCustomer);   
-	        menuActions.add(Customer::updateCustomer); 
-	        menuActions.add(Customer::deleteCustomer); 
-	        menuActions.add(Customer::showCustomers); 
-	        menuActions.add(() -> { 
-	            System.out.println("Exiting program...");
-	            scanner.close();
-	            System.exit(0);
-	        });
-
-	        while (true) {
-	            System.out.println("\n Customer Management System");
-	            System.out.println("1️:Add Customer");
-	            System.out.println("2️: Update Customer");
-	            System.out.println("3️: Delete Customer");
-	            System.out.println("4️: Show All Customers");
-	            System.out.println("5️: Exit");
-	            System.out.print("Enter your choice: ");
-
-	            int choice = scanner.nextInt();
-
-	            if (choice >= 1 && choice <= menuActions.size()) {
-	                menuActions.get(choice - 1).run();
-	            } else {
-	                System.out.println("Invalid choice! Please try again.");
-	            }
-	        }
-		
+	        				
 		
 		
 		
